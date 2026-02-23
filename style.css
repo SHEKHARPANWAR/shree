@@ -1,0 +1,229 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+/* Body */
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    
+    /* Glossy gradient */
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.4), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.3), transparent 40%),
+    linear-gradient(180deg,#ff9ecf,#ff69b4);
+}
+
+/* Sections (all pages) */
+.section{
+    background:lavender;
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    z-index:2;
+}
+
+.active{
+    display:flex;
+}
+
+/* Romantic Heading */
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+    color:#ff1493;
+    margin-bottom:25px;
+}
+
+/* Buttons */
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff69b4;
+    color: aliceblue;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(255,105,180,0.4);
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Password Input */
+input{
+    padding:10px;
+    border-radius:20px;
+    border:1px solid pink;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+/* Hint Message */
+#hintMessage{
+    color:#ff1493;
+    margin-top:10px;
+}
+
+/* Photo Frame (individual 30 photos) */
+.photo-frame{
+    width:240px;
+    height:240px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 40px rgba(255,105,180,0.5);
+    margin-bottom:15px;
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Photo Caption */
+#photoCaption{
+    color:#ff1493;
+    margin-bottom:20px;
+}
+
+/* Stickers */
+#stickerContainer{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    pointer-events:none;
+    z-index:0;
+}
+
+.sticker{
+    position:absolute;
+    width:65px;
+    opacity:0.85;
+}
+
+/* HEART COLLAGE */
+
+.heart-grid{
+    display:grid;
+    grid-template-columns:repeat(6, 65px);
+    grid-gap:6px;
+    justify-content:center;
+    margin-bottom:20px;
+    animation:fadeIn 2s ease forwards;
+}
+
+/* Each collage image */
+.heart-grid img{
+    width:65px;
+    height:65px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 0 8px rgba(255,105,180,0.5);
+}
+
+/* Heart shape mask */
+.heart-grid{
+    clip-path: polygon(
+        50% 90%, 
+        0% 50%, 
+        15% 25%, 
+        35% 10%, 
+        50% 25%, 
+        65% 10%, 
+        85% 25%, 
+        100% 50%
+    );
+}
+
+/* Collage Text */
+.collageText{
+    position:absolute;
+    font-family:'Great Vibes',cursive;
+    font-size:40px;
+    color:white;
+    text-shadow:0 0 20px hotpink;
+    animation:fadeIn 3s ease forwards;
+}
+
+/* FINAL TIMELINE */
+
+.startDate{
+    font-size:22px;
+    color:#ff1493;
+    margin:20px 0;
+}
+
+.timelineLine{
+    width:4px;
+    height:0;
+    background:#ff1493;
+    margin:auto;
+    animation:growLine 3s forwards;
+}
+
+.infinity{
+    font-size:60px;
+    color:#ff1493;
+    opacity:0;
+    animation:fadeInfinity 3s forwards;
+    animation-delay:3s;
+}
+
+/* Animations */
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes growLine{
+    to{height:200px;}
+}
+
+@keyframes fadeInfinity{
+    to{opacity:1;}
+}
+.touchMessage{
+    margin-top:20px;
+    font-size:18px;
+    color:#ff1493;
+    font-weight:500;
+    animation:fadeIn 0.5s ease forwards;
+}
+/* Glitter layer */
+.glitter{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    animation: sparkleMove 8s linear infinite;
+    opacity:0.5;
+}
+
+@keyframes sparkleMove{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-100px); }
+}

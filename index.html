@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forever Us ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glitter"></div>
+<audio id="bgMusic" src="piya.mp3"></audio>
+<div id="stickerContainer"></div>
+
+<!-- TAP TO ENTER -->
+<section class="section active" id="page1">
+    <h1>Jaldi se tap karo… surprise andar hai 💖</h1>
+    <button onclick="startMusic()">Tap to Enter</button>
+</section>
+
+<!-- PASSWORD PAGE -->
+<section class="section" id="page2">
+    <h1>Enter the Password ❤️</h1>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="hintMessage"></p>
+</section>
+
+<!-- 5 TOUCH IF PAGES -->
+
+<section class="section" id="page3">
+    <h1>Touch if you love Shree 💖</h1>
+    <button onclick="showMessage(3)">Touch</button>
+    <p class="touchMessage" id="msg3"></p>  <!-- YE LINE ADD KI -->
+</section>
+
+<section class="section" id="page4">
+    <h1>Touch if you care about her 🤍</h1>
+    <button onclick="showMessage(4)">Touch</button>
+<p class="touchMessage" id="msg4"></p>
+</section>
+
+<section class="section" id="page5">
+    <h1>Touch if she is the one 💍</h1>
+    <button onclick="showMessage(5)">Touch</button>
+<p class="touchMessage" id="msg5"></p>
+</section>
+
+<section class="section" id="page6">
+    <h1>Touch if you are her husband 😌</h1>
+    <button onclick="showMessage(6)">Touch</button>
+<p class="touchMessage" id="msg6"></p>
+</section>
+
+<section class="section" id="page7">
+    <h1>Touch if you love her unconditionally ❤️</h1>
+    <button onclick="showMessage(7)">Touch</button>
+<p class="touchMessage" id="msg7"></p>
+</section>
+
+<!-- 30 INDIVIDUAL PHOTO PAGES -->
+
+<section class="section" id="photoSection">
+    <div class="photo-frame">
+        <img id="photoDisplay" src="photo1.jpg">
+    </div>
+    <p id="photoCaption">My favorite memory ❤️</p>
+    <button onclick="nextPhoto()">Next</button>
+</section>
+
+<!-- HEART COLLAGE PAGE -->
+
+<section class="section" id="pageCollage">
+    <div class="heart-grid">
+        <!-- 30 photos -->
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+        <img src="photo4.jpg">
+        <img src="photo5.jpg">
+        <img src="photo6.jpg">
+        <img src="photo7.jpg">
+        <img src="photo8.jpg">
+        <img src="photo9.jpg">
+        <img src="photo10.jpg">
+        <img src="photo11.jpg">
+        <img src="photo12.jpg">
+        <img src="photo13.jpg">
+        <img src="photo14.jpg">
+        <img src="photo15.jpg">
+        <img src="photo16.jpg">
+        <img src="photo17.jpg">
+        <img src="photo18.jpg">
+        <img src="photo19.jpg">
+        <img src="photo20.jpg">
+        <img src="photo21.jpg">
+        <img src="photo22.jpg">
+        <img src="photo23.jpg">
+        <img src="photo24.jpg">
+        <img src="photo25.jpg">
+        <img src="photo26.jpg">
+        <img src="photo27.jpg">
+        <img src="photo28.jpg">
+        <img src="photo29.jpg">
+        <img src="photo30.jpg">
+    </div>
+
+    <div class="collageText">
+        I Love You Shekhar ❤️
+    </div>
+
+    <button onclick="nextPage()">Forever</button>
+</section>
+
+<!-- FINAL TIMELINE -->
+
+<section class="section" id="pageFinal">
+    <h1>Our Forever 💫</h1>
+    <p class="startDate">3rd July 2024</p>
+    <div class="timelineLine"></div>
+    <p class="infinity">∞</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
